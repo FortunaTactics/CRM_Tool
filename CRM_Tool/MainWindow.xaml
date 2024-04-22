@@ -1,0 +1,54 @@
+﻿<Window x:Class="CRM_Tool.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CRM_Tool"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="1080" Width="1920">
+    <!--Auflösung-->
+
+    <Grid>
+        <!--Zeilendefinitionen-->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="450"/>
+        </Grid.RowDefinitions>
+
+        <!--Spaltendefinitionen-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.ColumnSpan="3" FontFamily="Arial" FontSize="16" FontWeight="Bold" Background="Gray" Height="30" Grid.RowSpan="1" VerticalAlignment="Center" >Menüleiste</TextBlock>
+
+        <!--Spaltenübergreifender Hintergrund-->
+        <Label Grid.Row="1" Grid.ColumnSpan="3">
+            <Label.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF1A1B1A"/>
+                    <GradientStop Color="#FF88F70B" Offset="1"/>
+                </LinearGradientBrush>
+            </Label.Background>
+        </Label>
+
+        <Label Grid.Row="2" Grid.ColumnSpan="2" Grid.RowSpan="5" Background="#FFD2D2CE"/>
+
+        <DockPanel Grid.Row="2" Grid.ColumnSpan="2">
+            <Button Content="Kundenverwaltung" Margin="50" Background="#FFBBF7F0" FontFamily="Arial" FontSize="24" FontWeight="Bold"/>
+        </DockPanel>
+        <DockPanel Grid.Row="3" Grid.ColumnSpan="2">
+            <Button Content="Buchhaltung" Margin="50" Background="#FFF5DE9F" FontFamily="Arial" FontSize="24" FontWeight="Bold"/>
+        </DockPanel>
+        <DockPanel Grid.Row="4" Grid.ColumnSpan="2">
+            <Button Content="Warenverwaltung" Margin="50" Background="#FFC0F5A3" FontFamily="Arial" FontSize="24" FontWeight="Bold"/>
+        </DockPanel>
+
+    </Grid>
+</Window>
